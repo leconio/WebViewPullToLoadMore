@@ -20,10 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
     //核心代码
     private void webViewScrool() {
-        mWebView.setScrollerToBottomListener(new ExWebView.ScrollerToBottomListener() {
+        mWebView.setOnScrollToBottomListener(new ExWebView.ScrollerToBottomListener() {
             @Override
-            public void onReach() {
+            public boolean onReach() {
                 Log.e(TAG, "onReach:  到了到了到了到了到了到了到了");
+                return true;
             }
         });
     }
